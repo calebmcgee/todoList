@@ -6,7 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Todo List</h1>
+
+    <button id="displayTodosButton">Display Todos</button>
+    <button id="toggleAllButton">Toggle All</button>
+
     <script>
 
         var todoList = {
@@ -67,14 +71,21 @@
                     }      
                 }
             },
-
             
-
 
        };
 
-    </script>
+       var displayTodosButton = document.getElementById('displayTodosButton')
+       var toggleAllButton = document.getElementById('toggleAllButton')
 
-    
-</body>
+       displayTodosButton.addEventListener('click', function() {
+           todoList.displayTodos();
+       });
+       
+       toggleAllButton.addEventListener('click', function(){
+            todolist.toggleAll();
+       });
+
+    </script>
+    </body>
 </html>    
